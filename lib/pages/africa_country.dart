@@ -3,10 +3,6 @@ import 'package:pr2602/countries/countries.dart';
 import 'package:pr2602/pages/africa_list.dart';
 import 'package:card_swiper/card_swiper.dart';
 
-final List<String> picsList = [
-        countriesList[ind1].flag, countriesList[ind1].flag2, countriesList[ind1].flag3,
-      ];
-
 class AfricaCountry extends StatelessWidget {
   const AfricaCountry({super.key});
 

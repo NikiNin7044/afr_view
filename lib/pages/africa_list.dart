@@ -3,10 +3,18 @@ import 'package:pr2602/countries/countries.dart';
 import 'package:pr2602/pages/africa_country.dart';
 
 var ind1 = 0;
+List<String> picsList = [
+        countriesList[ind1].flag, countriesList[ind1].flag2, countriesList[ind1].flag3,
+      ];
 
-class AfricaList extends StatelessWidget {
+class AfricaList extends StatefulWidget {
   const AfricaList({super.key});
 
+  @override
+  State<AfricaList> createState() => _AfricaListState();
+}
+
+class _AfricaListState extends State<AfricaList> {
   @override
   Widget build(BuildContext context) {
 
@@ -21,7 +29,12 @@ class AfricaList extends StatelessWidget {
       
         return ElevatedButton(
           onPressed: () {
-            ind1 = index;
+            setState(() {
+              ind1 = index;
+              picsList = [
+        countriesList[ind1].flag, countriesList[ind1].flag2, countriesList[ind1].flag3,
+      ];
+            });
             Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const AfricaCountry()),
